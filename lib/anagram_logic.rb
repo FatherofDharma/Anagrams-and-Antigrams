@@ -16,8 +16,16 @@ class Word_test
     @first_word = first_word
     @second_word = second_word
 
-    if test_word(@first_word)
-      firstword = @first_word.split('')
+    if test_word(@first_word) && test_word(@second_word)
+      if @first_word != @second_word
+        # first_word_arr = @first_word.split('')
+        # second_word_arr = @second_word.split('')
+      else
+        'These are the same two words.'
+      end
+
+
+
     end
   end
 

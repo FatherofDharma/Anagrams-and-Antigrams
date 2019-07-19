@@ -14,9 +14,9 @@ describe('Word_test') do
   expect(example.test_word('dgt')).to(eq(false))
   end
 
-  # it ('should accurately identify if two words contain the same letters') do
-  #   test = Word_test.new('dog')
-  # expect(test.anagram('god')).to(eq(true))
-  # end
+  it ('should accurately identify if two words are the same word') do
+    example = Word_test.new()
+  expect(example.anagram('god', 'god')).to(eq('These are the same two words.'))
+  end
 
 end
