@@ -21,8 +21,8 @@ _This application is an independent project using Ruby, for coding school Epicod
 ## Specs
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-| | | |
-||||
+| Should correctly identify if a word is valid by containing a vowel or the letter y| 'dog' |true|
+|Should correctly identify if a word is invalid by not containing a vowel or the letter y|dgt|false|
 
 ## Known Bugs
 
