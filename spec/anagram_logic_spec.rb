@@ -21,15 +21,15 @@ describe('Word_test') do
 
   it ('should split the first word into an array for comparison') do
     example = Word_test.new()
-    test = example.anagram('dog', 'god')
-    pass = (['d', 'o', 'g', 'g', 'o', 'd'])
-  expect(test).to(eq(pass))
+    example.anagram('dog', 'god')
+  expect(example.first_word_arr).to(eq(['d', 'o', 'g']))
   end
 
-  # it ('should split the first word into an array for comparison') do
-  #   example = Word_test.new()
-  # expect(example.anagram('dog', 'god')).to(eq(['g', 'o', 'd']))
-  # end
+  it ('should split the first word into an array for comparison') do
+    example = Word_test.new()
+    example.anagram('dog', 'god')
+  expect(example.second_word_arr).to(eq(['g', 'o', 'd']))
+  end
 
   # it ('should accurately identify if two words contain the same letters') do
   #   example = Word_test.new()

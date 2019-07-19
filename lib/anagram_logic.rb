@@ -23,15 +23,19 @@ class Word_test
     @second_word = second_word
 
     if test_word(@first_word) && test_word(@second_word)
-      first_word_arr = @first_word.split('')
-      second_word_arr = @second_word.split('')
-
-      first_word_arr + second_word_arr
+      @first_word_arr = @first_word.split('')
+      @second_word_arr = @second_word.split('')
 
 
     end
-
   end
 
+  def first_word_arr
+    @first_word_arr
+  end
+
+  def second_word_arr
+    @second_word_arr
+  end
 
 end
