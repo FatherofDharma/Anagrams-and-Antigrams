@@ -27,6 +27,15 @@ _This application is an independent project using Ruby, for coding school Epicod
 |Should accurately identify if two words contain the same letters|'dog'|'god'|
 |Should split the first word into an array for comparison| 'dog' | ['d', 'o', 'g']|
 |Should split the second word into an array for comparison| 'god' |['g', 'o', 'd']|
+|Should accurately identify if two words do not contain the same letters| 'dog', 'got'|'These words are neither anagrams or antigrams, sorry!'|
+|Should accurately identify if two words contain the same letters|'dog', 'god'|'These words are anagrams'|
+|Should accurately identify if two words contain the same letters regardless of case|'Dog', 'God'|'These words are anagrams'|
+|Should accurately identify if two words contain the same letters regardless of punction|"Dog's", "God!"|"Dog's", "God!"|
+|Should take a phrase from the user and remove all punctuation|"I like dogs, alot!"|'I like dogs alot'|
+|Should take a phrase from the user and remove all punctuation|"I like dogs, alot!", "I like gods, alot!"|'These words are anagrams'|
+
+
+
 
 ## Known Bugs
 

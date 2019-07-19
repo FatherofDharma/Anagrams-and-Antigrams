@@ -41,4 +41,24 @@ describe('Word_test') do
   expect(example.anagram_test('dog', 'god')).to(eq('These words are anagrams'))
   end
 
+  it ('should accurately identify if two words contain the same letters regardless of case') do
+    example = Word_test.new()
+  expect(example.anagram_test('Dog', 'God')).to(eq('These words are anagrams'))
+  end
+
+  it ('should accurately identify if two words contain the same letters regardless of punction') do
+    example = Word_test.new()
+  expect(example.anagram_test("Dog's", "God!")).to(eq('These words are neither anagrams or antigrams, sorry!'))
+  end
+
+  it ('should take a phrase from the user and remove all punctuation') do
+    example = Word_test.new()
+  expect(example.phrase_test("I like dogs, alot!")).to(eq('I like dogs alot'))
+  end
+
+  it ('should take a phrase from the user and remove all punctuation') do
+    example = Word_test.new()
+  expect(example.anagram_test("I like dogs, alot!", "I like gods, alot!")).to(eq('These words are anagrams'))
+  end
+
 end

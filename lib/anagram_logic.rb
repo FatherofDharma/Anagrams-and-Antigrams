@@ -21,9 +21,10 @@ class Word_test
   end
 
   def anagram
+    #found the .delete(' ') solution for removing whitespace on stack overflow
     if test_word(@first_word) && test_word(@second_word)
-      @first_word_arr = @first_word.split('')
-      @second_word_arr = @second_word.split('')
+      @first_word_arr = @first_word.delete(' ').split('')
+      @second_word_arr = @second_word.delete(' ').split('')
       j = 0
       score = 0
       while (j < @first_word_arr.length)
@@ -32,9 +33,7 @@ class Word_test
           until (x > @second_word_arr.length)
             if @first_word_arr[j] == @second_word_arr[x]
               score += 1
-              # break
             end
-            # binding.pry
             x += 1
           end
         end
@@ -50,16 +49,23 @@ class Word_test
     end
   end
 
-
   def anagram_test(first_word, second_word)
-    @first_word = first_word
-    @second_word = second_word
 
+    @first_word = (first_word.downcase).gsub(/[!@#$%^&*()-=_+|;':",.<>?']/, '')
+    @second_word = second_word.downcase.gsub(/[!@#$%^&*()-=_+|;':",.<>?']/, '')
     if same_word(@first_word, @second_word)
       'These words are identical'
     else
       anagram
     end
+  end
+  
+  #This method was made obsolete after a refactor in the anagram_test and anagram methods, but left in here so the specs still pass as written.
+
+  def phrase_test(phrase)
+    @phrase = phrase.gsub(/[!@#$%^&*()-=_+|;':",.<>?']/, '')
+    # anagram_test(word1, word2)
+
   end
 
   def first_word_arr
