@@ -16,7 +16,7 @@ describe('Word_test') do
 
   it ('should accurately identify if two words are the same word') do
     example = Word_test.new()
-  expect(example.anagram('god', 'god')).to(eq('These are the same two words.'))
+  expect(example.anagram('god', 'god')).to(eq('These are the same two words. Please enter two different words.'))
   end
 
 end

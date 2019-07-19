@@ -21,7 +21,7 @@ class Word_test
         # first_word_arr = @first_word.split('')
         # second_word_arr = @second_word.split('')
       else
-        'These are the same two words.'
+        'These are the same two words. Please enter two different words.'
       end
 
 
