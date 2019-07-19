@@ -25,20 +25,28 @@ class Word_test
       @first_word_arr = @first_word.split('')
       @second_word_arr = @second_word.split('')
       j = 0
-
+      score = 0
       while (j <= @first_word_arr.length)
         x = 0
-        until (x <= @second_word_arr.length)
-          if (@first_word_arr[j] != @second_word_arr[x])
-            x += 1
-          else
-            "These words are not anagrams"
-            break
+        if score < @first_word_arr.length
+          until (x > @second_word_arr.length)
+
+            if @first_word_arr[j] == @second_word_arr[x]
+              score += 1
+              x += 1
+            else
+              x += 1
+            end
           end
+          # binding.pry
+        elsif score == @first_word_arr
+          "These words are anagrams"
+        elsif score == 0
+          "These words are antigrams"
         end
         j += 1
       end
-      "These words are anagrams"
+        "These words are neither anagrams or antigrams, sorry!"
     end
   end
 
