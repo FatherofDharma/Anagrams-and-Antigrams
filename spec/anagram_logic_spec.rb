@@ -36,4 +36,9 @@ describe('Word_test') do
   expect(example.anagram_test('dog', 'got')).to(eq('These words are neither anagrams or antigrams, sorry!'))
   end
 
+  it ('should accurately identify if two words contain the same letters') do
+    example = Word_test.new()
+  expect(example.anagram_test('dog', 'god')).to(eq('These words are anagrams'))
+  end
+
 end

@@ -26,27 +26,27 @@ class Word_test
       @second_word_arr = @second_word.split('')
       j = 0
       score = 0
-      while (j <= @first_word_arr.length)
+      while (j < @first_word_arr.length)
         x = 0
         if score < @first_word_arr.length
           until (x > @second_word_arr.length)
-
             if @first_word_arr[j] == @second_word_arr[x]
               score += 1
-              x += 1
-            else
-              x += 1
+              # break
             end
+            # binding.pry
+            x += 1
           end
-          # binding.pry
-        elsif score == @first_word_arr
-          "These words are anagrams"
-        elsif score == 0
-          "These words are antigrams"
         end
         j += 1
       end
-        "These words are neither anagrams or antigrams, sorry!"
+      if score == @first_word_arr.length
+      'These words are anagrams'
+      elsif score == 0
+        'These words are antigrams'
+      else
+        'These words are neither anagrams or antigrams, sorry!'
+      end
     end
   end
 
@@ -56,7 +56,7 @@ class Word_test
     @second_word = second_word
 
     if same_word(@first_word, @second_word)
-      "These words are identical"
+      'These words are identical'
     else
       anagram
     end
