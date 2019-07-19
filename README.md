@@ -25,6 +25,8 @@ _This application is an independent project using Ruby, for coding school Epicod
 |Should correctly identify if a word is invalid by not containing a vowel or the letter y|'dgt'|false|
 |Should accurately identify if two words are the same word|'god', 'god'|'These are the same two words. Please enter two different words.'|
 |Should accurately identify if two words contain the same letters|'dog'|'god'|
+|Should split the first word into an array for comparison| 'dog' | ['d', 'o', 'g']|
+|Should split the second word into an array for comparison| 'god' |['g', 'o', 'd']|
 
 ## Known Bugs
 
